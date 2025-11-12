@@ -1,0 +1,33 @@
+diff --git a/package.json b/package.json
+index e8ff78dd4080e3f6e206295c332be5e4388c809b..59e213566c93df7e1950e9ac1c065cf7d283f912 100644
+--- a/package.json
++++ b/package.json
+@@ -7,9 +7,25 @@
+   "module": "./dist/index.js",
+   "types": "./dist/index.d.ts",
+   "exports": {
+-    ".": {
+-      "import": "./dist/index.js",
+-      "types": "./dist/index.d.ts"
++    "./authkit": {
++      "import": "./dist/server/authkit.js",
++      "types": "./dist/server/authkit.d.ts"
++    },
++    "./callback": {
++      "import": "./dist/server/server.js",
++      "types": "./dist/server/server.d.ts"
++    },
++    "./middleware": {
++      "import": "./dist/server/middleware.js",
++      "types": "./dist/server/middleware.d.ts"
++    },
++    "./serverFns": {
++      "import": "./dist/server/server-functions.js",
++      "types": "./dist/server/server-functions.d.ts"
++    },
++    "./types": {
++      "import": "./dist/types.js",
++      "types": "./dist/types.d.ts"
+     },
+     "./client": {
+       "import": "./dist/client/index.js",
