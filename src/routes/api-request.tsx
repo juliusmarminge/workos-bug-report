@@ -20,7 +20,7 @@ export const Route = createFileRoute("/api-request")({
     handlers: {
       POST: async () => {
         const auth = await getAuth();
-        console.log("server handler", auth);
+        console.log("Authenticated in server handler?", auth.user ? "Yes" : "No");
         const name = auth.user?.firstName ?? "anon";
         return json({
           message: `Hello, ${name}!`,
